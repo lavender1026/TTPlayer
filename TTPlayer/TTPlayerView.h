@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TTPlayerView : UITableViewController
-
+@interface TTPlayerView : UITableView
+@property (nonatomic, strong) UIViewController *vc;
 @end

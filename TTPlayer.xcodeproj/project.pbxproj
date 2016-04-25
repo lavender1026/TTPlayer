@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		024324391CCE158C00887CC8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 024324381CCE158C00887CC8 /* ViewController.m */; };
 		0283A5001CCB915700CA0C71 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0283A4DF1CCB915700CA0C71 /* MKAnnotationView+WebCache.m */; };
 		0283A5011CCB915700CA0C71 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0283A4E11CCB915700CA0C71 /* NSData+ImageContentType.m */; };
 		0283A5021CCB915700CA0C71 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0283A4E21CCB915700CA0C71 /* placeholder.png */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		024324371CCE158C00887CC8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		024324381CCE158C00887CC8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0283A4DE1CCB915700CA0C71 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		0283A4DF1CCB915700CA0C71 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		0283A4E01CCB915700CA0C71 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -132,6 +135,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		024324361CCE129000887CC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0283A5111CCB929B00CA0C71 /* TTVideo.h */,
+				0283A5121CCB929B00CA0C71 /* TTVideo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0243243A1CCE159000887CC8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				024324371CCE158C00887CC8 /* ViewController.h */,
+				024324381CCE158C00887CC8 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0243243B1CCE15AE00887CC8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				02AC87661CCB894000FBD08A /* TTPlayerView.h */,
+				02AC87671CCB894000FBD08A /* TTPlayerView.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		0283A4DD1CCB915700CA0C71 /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,10 +230,9 @@
 				02AC87361CCB88E400FBD08A /* AppDelegate.h */,
 				02AC87371CCB88E400FBD08A /* AppDelegate.m */,
 				02AC873C1CCB88E400FBD08A /* Main.storyboard */,
-				02AC87661CCB894000FBD08A /* TTPlayerView.h */,
-				02AC87671CCB894000FBD08A /* TTPlayerView.m */,
-				0283A5111CCB929B00CA0C71 /* TTVideo.h */,
-				0283A5121CCB929B00CA0C71 /* TTVideo.m */,
+				0243243B1CCE15AE00887CC8 /* ViewModel */,
+				0243243A1CCE159000887CC8 /* Controller */,
+				024324361CCE129000887CC8 /* Model */,
 				02AC873F1CCB88E400FBD08A /* Assets.xcassets */,
 				02AC87411CCB88E400FBD08A /* LaunchScreen.storyboard */,
 				02AC87441CCB88E400FBD08A /* Info.plist */,
@@ -372,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				024324391CCE158C00887CC8 /* ViewController.m in Sources */,
 				0283A50E1CCB915700CA0C71 /* UIImageView+HighlightedWebCache.m in Sources */,
 				0283A50C1CCB915700CA0C71 /* UIImage+MultiFormat.m in Sources */,
 				0283A5071CCB915700CA0C71 /* SDWebImageDownloaderOperation.m in Sources */,
