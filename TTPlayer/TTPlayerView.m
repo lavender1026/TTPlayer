@@ -76,6 +76,7 @@
 
 #pragma mark tableview代理
 
+//设置row的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     return 80;
