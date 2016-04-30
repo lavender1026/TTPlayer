@@ -69,6 +69,49 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self reloadData];
             });
+            if (data && !error) {
+                
+                NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+                
+                //            NSLog(@"%@",array);
+                /**
+                 *   添加模型
+                 */
+                NSMutableArray *arrM = [NSMutableArray array];
+                [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    TTVideo *video = [TTVideo VideoWithDict:obj];
+                    [arrM addObject:video];
+                    //                这里讲模型数组设置到声明的array中
+                    _videos = arrM;
+                }];
+                /**
+                 *   模型添加完毕，这时候需要刷新ui，因为使用json网络下载都是异步子线程中完成的，so要返回主线程刷新、
+                 */
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self reloadData];
+                });
+                if (data && !error) {
+                    
+                    NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+                    
+                    //            NSLog(@"%@",array);
+                    /**
+                     *   添加模型
+                     */
+                    NSMutableArray *arrM = [NSMutableArray array];
+                    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        TTVideo *video = [TTVideo VideoWithDict:obj];
+                        [arrM addObject:video];
+                        //                这里讲模型数组设置到声明的array中
+                        _videos = arrM;
+                    }];
+                    /**
+                     *   模型添加完毕，这时候需要刷新ui，因为使用json网络下载都是异步子线程中完成的，so要返回主线程刷新、
+                     */
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self reloadData];
+                    });
+
         }
     }] resume];
 
