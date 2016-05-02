@@ -37,14 +37,6 @@
         self.delegate = self;
         self.dataSource = self;
     }
-//    
-    if (self) {
-        [self loadServerDataWithUrlString:@"http://127.0.0.1/resources/vedios.json"];
-        //        这里注意 ，设置代理以及数据源可以设置给view
-        self.delegate = self;
-        self.dataSource = self;
-    }
-//    
     return self;
 }
 #pragma mark 读取网络数据
